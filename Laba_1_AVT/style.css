@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Film1Font';
+    src: url('../fonts/cd2f1-36d91_sunday.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Film2Font';
+    src: url('../fonts/majestic_x.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Film3Font';
+    src: url('../fonts/nexa_script_heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#film1 {
+    font-family: 'Film1Font', Arial, sans-serif;
+}
+
+#film2 {
+    font-family: 'Film2Font', Arial, sans-serif;
+    
+}
+
+#film3 {
+    font-family: 'Film3Font', Arial, sans-serif;
+    
+}
+
+#film1 p {
+    text-align: left;
+    font-weight: 1000; /*жирный текст*/
+}
+
+#film2 p {
+    text-align: center;
+
+}
+
+#film3 p {
+    text-align: right;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #aaaabb;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #000002;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+.movie {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.movie h2 {
+    color: #444;
+}
+
+.movie-img-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.movie-img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover; /*Сохраняет пропорцию изображения при изменении размера*/
+    border-radius: 50px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #0a005e;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #8f8db7;
+}

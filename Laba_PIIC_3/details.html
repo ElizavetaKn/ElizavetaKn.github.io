@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirt Details</title>
+    <style>
+
+        .view-button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Shirt Details</h1>
+<div id="shirt-container">
+    <h3 id="shirt-name"></h3>
+    <img id="shirt-image" src="" alt="Shirt image" style="width: 200px; height: 220px;">
+
+    <div id="shirt-colors"></div>
+    <div>
+        <button id="view-front" class="view-button">View Front</button>
+        <button id="view-back" class="view-button">View Back</button>
+    </div>
+</div>
+
+<script>
+
+    function getShirtFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const shirtData = params.get('shirt');
+        return shirtData ? JSON.parse(decodeURIComponent(shirtData)) : null;
+    }
+
+    function displayShirtDetails(shirt) {
+        if (!shirt) return;
+
+        document.getElementById('shirt-name').textContent = shirt.name || "Name not available";
+        const imgElement = document.getElementById('shirt-image');
+        let currentSide = 'front';
+        let currentColor = 'white';
+
+
+        function updateShirtImage() {
+            imgElement.src = shirt.colors[currentColor][currentSide] || "C:\\Users\\kukid\\OneDrive\\Рабочий стол\\LABA_3_PIIC\\Redem-Error.jpeg";
+        }
+
+        updateShirtImage();
+
+        const colorsContainer = document.getElementById('shirt-colors');
+        colorsContainer.innerHTML = '';
+
+        const viewFrontButton = document.getElementById('view-front');
+        const viewBackButton = document.getElementById('view-back');
+
+        viewFrontButton.addEventListener('click', function() {
+            currentSide = 'front';
+            updateShirtImage();
+        });
+
+        viewBackButton.addEventListener('click', function() {
+            currentSide = 'back';
+            updateShirtImage();
+        });
+
+        if (shirt.colors) {
+            const colorKeys = Object.keys(shirt.colors);
+            colorKeys.forEach(color => {
+                const button = document.createElement('button');
+                button.textContent = color;
+                button.classList.add('color-button');
+                button.style.backgroundColor = color;
+
+                button.addEventListener('click', function() {
+                    currentColor = color;
+                    updateShirtImage();
+                });
+
+                colorsContainer.appendChild(button);
+            });
+        } else {
+            colorsContainer.textContent = "Colors not available";
+        }
+    }
+
+    const selectedShirt = getShirtFromUrl();
+    displayShirtDetails(selectedShirt);
+
+</script>
+
+</body>
+</html>

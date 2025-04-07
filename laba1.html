@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Database</title>
+<style>
+   body {
+        font-family:Arial, sans-serif;
+        margin: 20px;
+   }
+</style>
+</head>
+<body>
+<script>
+      //Запрос количества фильмов
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+      //Создание объекта personalMovieDB
+const personalMovieDB = {count: numberOfFilms, movies: {}};
+ //Запросы о последних просмотренных фильмах
+for (let i=0; i < numberOfFilms; i++){
+     let film, rating;
+     while (true){
+         film = prompt('Один из последних просмотренных фильмов?');
+         rating = prompt('На сколько оцените его?');
+     //Проверка условий
+         if (film && rating && film.length <= 50 && rating >= 0 && rating <=10){
+             break; // выход из цикла, если все условия выполнены
+         } else {
+             alert('Пожалуйста, введите корректные данные.');
+         }
+     }
+//Запись ответов в объект movies
+personalMovieDB.movies[film] = rating;
+}
+//Вывод объекта в консоль
+console.log(personalMovieDB.movies);
+
+</script>
+</body>
+</html>

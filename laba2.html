@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Database</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+<table id="moviesTable"></table>
+<script>
+    // Создание объекта personalMovieDB
+    let personalMovieDB = {
+        privat: false,
+        movies: {
+            "Inception": 9,
+            "The Dark Knight": 8,
+            "Interstellar": 9.5
+        }
+    };
+
+    // Функция для вывода объекта movies в виде таблицы на страницу
+    function displayMoviesTable() {
+        let table = document.getElementById('moviesTable');
+        table.innerHTML = '<tr><th>Movie</th><th>Rating</th></tr>';
+        
+        for (let movie in personalMovieDB.movies) {
+            let row = table.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.textContent = movie;
+            cell2.textContent = personalMovieDB.movies[movie];
+        }
+    }
+
+    // Проверка свойства privat и вызов функции для вывода таблицы
+    if (!personalMovieDB.privat) {
+        displayMoviesTable();
+    }
+</script>
+</body>
+</html>
