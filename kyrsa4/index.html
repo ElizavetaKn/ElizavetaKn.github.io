@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный блог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-theme.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="ommunity-page.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+            <h1 class="logo__text">Мой блог</h1>
+        </a>
+
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span class="burger-menu__line"></span>
+            <span class="burger-menu__line"></span>
+            <span class="burger-menu__line"></span>
+        </button>
+
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#hero" class="navigation__link">Главная</a></li>
+                <li class="navigation__item"><a href="community.html" class="navigation__link">Сообщество</a></li>
+                <li class="navigation__item"><a href="#featured" class="navigation__link">Избранные посты</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">Обо мне</a></li>
+                <li class="navigation__item"><a href="#categories" class="navigation__link">Категории</a></li>
+                <li class="navigation__item"><a href="#gallery" class="navigation__link">Галерея</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Контакты</a></li>
+                <li class="navigation__item"><a href="create-post.html" class="navigation__link">Создать пост</a></li>
+            </ul>
+        </nav>
+
+        <button class="theme-toggle" aria-label="Переключить тему" title="Переключить тему">
+            <svg class="theme-toggle__icon theme-toggle__icon--light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7025 19.8458 15.0957 20.4265C13.4889 21.0073 11.748 21.1181 10.0795 20.7461C8.41104 20.3741 6.88299 19.5345 5.67413 18.3261C4.46526 17.1177 3.62511 15.5901 3.25256 13.9217C2.88002 12.2533 2.99028 10.5123 3.57043 8.90549C4.15058 7.29864 5.17651 5.88842 6.52886 4.84206C7.88121 3.7957 9.50321 3.1561 11.205 3C9.74474 4.87294 9.24573 7.29467 9.85882 9.60404C10.4719 11.9134 12.1215 13.8545 14.3525 14.8866" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h2 class="hero__title">Добро пожаловать в мой личный блог</h2>
+                <p class="hero__subtitle">Делюсь мыслями, впечатлениями и знаниями</p>
+                <a href="#featured" class="button">Читать посты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Избранные посты</h2>
+            <div class="featured__grid">
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="tuman.jpg" alt="Пост о путешествии" class="post-card__image">
+                    </div>
+                    <div class="post-card__content">
+                        <span class="post-card__date">12 апреля 2025</span>
+                        <h3 class="post-card__title">Путешествие в горы: что нужно знать</h3>
+                        <p class="post-card__excerpt">Делюсь своим опытом подготовки к горным походам и рассказываю о самых живописных маршрутах.</p>
+                        <a href="blog-post.html" class="post-card__link">Читать далее</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="kniga.jpg" alt="Пост о книгах" class="post-card__image">
+                    </div>
+                    <div class="post-card__content">
+                        <span class="post-card__date">5 апреля 2025</span>
+                        <h3 class="post-card__title">5 книг, которые изменили мою жизнь</h3>
+                        <p class="post-card__excerpt">Обзор литературы, которая повлияла на мое мировоззрение и помогла мне найти свой путь.</p>
+                        <a href="blog-post.html" class="post-card__link">Читать далее</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="zakat.jpg" alt="Пост о фотографии" class="post-card__image">
+                    </div>
+                    <div class="post-card__content">
+                        <span class="post-card__date">28 марта 2025</span>
+                        <h3 class="post-card__title">Основы мобильной фотографии</h3>
+                        <p class="post-card__excerpt">Как делать потрясающие фотографии на смартфон: советы, приложения и секреты композиции.</p>
+                        <a href="blog-post.html" class="post-card__link">Читать далее</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__content">
+                <div class="about__image-container">
+                    <img src="avtor.jpg" alt="Автор блога" class="about__image">
+                </div>
+                <div class="about__text">
+                    <h2 class="section-title">Обо мне</h2>
+                    <p class="about__description">Привет! Меня зовут Елизавета, и я рада приветствовать вас в своем личном блоге. Я увлекаюсь фотографией, путешествиями и технологиями. Через этот блог я делюсь своими мыслями, опытом и знаниями.</p>
+                    <p class="about__description">Моя цель — создать уютное пространство для обмена идеями и вдохновения. Надеюсь, что мои посты будут вам интересны и полезны.</p>
+                    <a href="about.html" class="button">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Категории</h2>
+            <div class="categories__grid">
+                <a href="#" class="category-card">
+                    <div class="category-card__icon">📷</div>
+                    <h3 class="category-card__title">Фотография</h3>
+                    <p class="category-card__count">12 постов</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-card__icon">🌎</div>
+                    <h3 class="category-card__title">Путешествия</h3>
+                    <p class="category-card__count">8 постов</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-card__icon">📚</div>
+                    <h3 class="category-card__title">Книги</h3>
+                    <p class="category-card__count">15 постов</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-card__icon">💻</div>
+                    <h3 class="category-card__title">Технологии</h3>
+                    <p class="category-card__count">10 постов</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery/Carousel Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Галерея</h2>
+            <div class="carousel">
+                <div class="carousel__container">
+                    <div class="carousel__slide carousel__slide--active">
+                        <img src="zakat.jpg" alt="Изображение 1" class="carousel__image">
+                        <div class="carousel__caption">Прекрасный закат на берегу моря</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="tuman.jpg" alt="Изображение 2" class="carousel__image">
+                        <div class="carousel__caption">Горный пейзаж в туманное утро</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="kafeinya.jpg" alt="Изображение 3" class="carousel__image">
+                        <div class="carousel__caption">Уютная кофейня в старом городе</div>
+                    </div>
+                </div>
+                <button class="carousel__button carousel__button--prev" aria-label="Предыдущий слайд">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="carousel__button carousel__button--next" aria-label="Следующий слайд">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel__dots">
+                    <button class="carousel__dot carousel__dot--active" aria-label="Перейти к слайду 1"></button>
+                    <button class="carousel__dot" aria-label="Перейти к слайду 2"></button>
+                    <button class="carousel__dot" aria-label="Перейти к слайду 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Связаться со мной</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <svg class="contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92V19.92C22 20.4704 21.7893 20.9991 21.4142 21.3742C21.0391 21.7493 20.5104 21.96 19.96 21.96C9.49001 21.96 0.960007 13.43 0.960007 2.96C0.960007 2.4096 1.1707 1.88088 1.54581 1.50577C1.92091 1.13067 2.44964 0.92 3.00001 0.92H6.00001C6.53044 0.92 7.03916 1.12071 7.41174 1.48329C7.78432 1.84588 8.00001 2.33043 8.00001 2.84C8.00001 4.22 8.22001 5.55 8.64001 6.8C8.80186 7.28681 8.79657 7.81851 8.62517 8.30138C8.45377 8.78425 8.12585 9.1867 7.70001 9.46L6.20001 10.47C7.37452 12.9447 9.5553 14.9755 12.21 15.95L13.21 14.45C13.4833 14.0242 13.8858 13.6962 14.3686 13.5248C14.8515 13.3534 15.3832 13.3481 15.87 13.51C17.12 13.93 18.45 14.15 19.83 14.15C20.3496 14.15 20.8341 14.3657 21.1967 14.7383C21.5593 15.1108 21.8 15.6004 21.8 16.12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="tel:+375445546828" class="contact__link">+375 (44) 554-68-28</a>
+                    </div>
+                    <div class="contact__item">
+                        <svg class="contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12.75C13.6569 12.75 15 11.4069 15 9.75C15 8.09315 13.6569 6.75 12 6.75C10.3431 6.75 9 8.09315 9 9.75C9 11.4069 10.3431 12.75 12 12.75Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.5 9.75C19.5 16.5 12 21.75 12 21.75C12 21.75 4.5 16.5 4.5 9.75C4.5 7.76088 5.29018 5.85322 6.6967 4.4467C8.10322 3.04018 10.0109 2.25 12 2.25C13.9891 2.25 15.8968 3.04018 17.3033 4.4467C18.7098 5.85322 19.5 7.76088 19.5 9.75V9.75Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="https://maps.google.com?q=Минск,+Площадь+Независимости" target="_blank" class="contact__link">Минск, площадь Независимости</a>
+                    </div>
+                    <div class="contact__item">
+                        <svg class="contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="mailto:liza20050103@gmail.com" class="contact__link">liza20050103@gmail.com</a>
+                    </div>
+                </div>
+                <form class="contact__form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="button button--full">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <h2 class="footer__title">Мой блог</h2>
+                <p class="footer__subtitle">Делюсь мыслями и опытом</p>
+            </div>
+            <div class="footer__links">
+                <h3 class="footer__heading">Навигация</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#hero" class="footer__link">Главная</a></li>
+                    <li class="footer__item"><a href="#featured" class="footer__link">Избранные посты</a></li>
+                    <li class="footer__item"><a href="#about" class="footer__link">Обо мне</a></li>
+                    <li class="footer__item"><a href="#categories" class="footer__link">Категории</a></li>
+                    <li class="footer__item"><a href="#gallery" class="footer__link">Галерея</a></li>
+                    <li class="footer__item"><a href="#contact" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="create-post.html" class="footer__link">Создать пост</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h3 class="footer__heading">Социальные сети</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.19439 12.773 4.95372C12.2575 5.71305 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2025 Мой личный блог. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="carousel.js"></script>
+<script src="theme-toggle.js"></script>
+<script src="community-page.js"></script>
+</body>
+</html>
